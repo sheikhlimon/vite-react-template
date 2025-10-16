@@ -1,11 +1,43 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite Template
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+## Features
+
+- ⚡️ **Vite** - Lightning fast HMR and build tool
+- ⚛️ **React 19** with TypeScript
+- 🎨 **Prettier** - Code formatting
+- 🔍 **ESLint** - Code linting with TypeScript support
+- 🐶 **Husky** - Git hooks for code quality
+- 🎯 **eslint-config-prettier** - ESLint and Prettier integration
+
+## Getting Started
+
+To create a new project using this template:
+
+```bash
+npx degit yourname/vite-react-template my-new-project
+cd my-new-project
+npm install
+```
+
+Replace `yourname` with your GitHub username and `my-new-project` with your desired project name.
+
+## What's Included
+
+### Vite Plugins
 
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+### Code Quality Tools
+
+- **ESLint**: Configured with TypeScript support and React best practices
+- **Prettier**: Pre-configured for consistent code formatting
+- **eslint-config-prettier**: Disables conflicting ESLint rules
+- **Husky**: Runs pre-commit hooks to ensure code quality before commits
 
 ## React Compiler
 
