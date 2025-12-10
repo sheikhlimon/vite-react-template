@@ -1,105 +1,58 @@
-# React + TypeScript + Vite Template
+# Vite React Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern React + TypeScript template with Vite, featuring automated dependency updates.
 
-## Features
-
-- ⚡️ **Vite** - Lightning fast HMR and build tool
-- ⚛️ **React 19** with TypeScript
-- 🎨 **Prettier** - Code formatting
-- 🔍 **ESLint** - Code linting with TypeScript support
-- 🐶 **Husky** - Git hooks for code quality
-- 🎯 **eslint-config-prettier** - ESLint and Prettier integration
-
-## Getting Started
-
-To create a new project using this template:
+## 🚀 Quick Start
 
 ```bash
-npx degit yourname/vite-react-template my-new-project
-cd my-new-project
+npx degit limon/vite-react-template my-project
+cd my-project
 npm install
+npm run dev
 ```
 
-Replace `yourname` with your GitHub username and `my-new-project` with your desired project name.
+## ✨ Features
 
-## What's Included
+- ⚡️ **React 19** + **TypeScript** - Latest React with full type safety
+- 🔥 **Vite** - Lightning fast builds and HMR
+- 🎨 **Modern Tooling** - ESLint 9, Prettier 3.7
+- 🐶 **Git Hooks** - Husky + lint-staged for code quality
+- 🤖 **Auto Updates** - Dependabot keeps dependencies current
+- ⚙️ **Pre-configured** - Production-ready setup out of the box
 
-### Vite Plugins
+## 📦 Scripts
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-### Code Quality Tools
-
-- **ESLint**: Configured with TypeScript support and React best practices
-- **Prettier**: Pre-configured for consistent code formatting
-- **eslint-config-prettier**: Disables conflicting ESLint rules
-- **Husky**: Runs pre-commit hooks to ensure code quality before commits
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```bash
+npm run dev        # Start development server
+npm run build      # Build for production
+npm run lint       # Run ESLint
+npm run preview    # Preview production build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Code Quality
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+- **ESLint**: TypeScript + React best practices
+- **Prettier**: Consistent code formatting
+- **Husky**: Pre-commit hooks enforce quality
+- **lint-staged**: Runs linters only on staged files
 
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+## 🔄 Auto Updates
+
+This template includes Dependabot configuration that:
+- Runs weekly (Mondays 9am UTC)
+- Updates npm and GitHub Actions
+- Creates pull requests automatically
+- Assigns reviewers and labels
+
+## 📁 Project Structure
+
+```
+src/
+├── App.tsx          # Main app component
+├── index.css        # Global styles
+└── main.tsx         # Entry point
+
+eslint.config.js     # ESLint configuration
+tsconfig.*.json      # TypeScript configs
+vite.config.ts       # Vite configuration
 ```
